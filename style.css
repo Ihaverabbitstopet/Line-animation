@@ -13,3 +13,27 @@ body{
     overflow: hidden;
 
 }
+
+.draw-path {
+    stroke-dasharray: 3000; /* Large enough value to cover entire path */
+    stroke-dashoffset: 3000; /* Initially hidden */
+    animation: draw 1s linear forwards;
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .draw-path2 {
+    stroke-dasharray: 3000; /* Large enough value to cover entire path */
+    stroke-dashoffset: 3000; /* Initially hidden */
+    animation: draw 1s linear forwards;
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
