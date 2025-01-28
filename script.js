@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         path.style.transition = "stroke-dashoffset 1s linear";
         path.style.strokeDashoffset = "0";
-      }, 2000);
+      }, 3000);
     });
   });
   
