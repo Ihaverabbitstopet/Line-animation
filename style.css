@@ -10,7 +10,7 @@ body {
   height: 100%;
   text-align: center;
   overflow: hidden;
-  margin: 20px;
+  
 }
 
 path {
@@ -25,27 +25,46 @@ path {
   animation: trace 2.5s linear forwards;
 }
 
-.path-1 { animation-delay: 0.4s; }
-.path-2 { animation-delay: 0s; }
-.path-3 { animation-delay: 0.25s; }
-.path-4 { animation-delay: 0s; }
+.path-1 { stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: trace 2.1s linear forwards;
+  animation-delay: 0.4s; 
+}
+
+.path-2 { stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: trace 2.5s linear forwards;
+  animation-delay: 0s; 
+}
+
+.path-3 { stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: trace 2.5s linear forwards;
+  animation-delay: 0s;
+ }
+
+.path-4 { stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: trace 2.25s linear forwards;
+  animation-delay: 0.25s;
+ }
 
 /* Paths 5–8: Moving segment effect */
 .path-5, .path-6, .path-7, .path-8, .path-9, .path-10, .path-11, .path-12{
   stroke-dasharray: 30 3000; /* 150px visible, 3000px hidden */
   stroke-dashoffset: 150; /* Start hidden */
-  animation: moving-segment 20s linear infinite; /* Moves the visible part */
+  animation: moving-segment 15s linear infinite; /* Moves the visible part */
 }
 
 /* Staggered animation start times */
-.path-5 { animation-delay: 2.4s; }
+.path-5 { animation-delay: 2.8s; }
 .path-6 { animation-delay: 5s; }
 .path-7 { animation-delay: 4; }
-.path-8 { animation-delay: 1.6s; }
-.path-9 { animation-delay: 10.8s; }
-.path-10 { animation-delay: 15s; }
-.path-11 { animation-delay: 14s; }
-.path-12 { animation-delay: 11.6s; }
+.path-8 { animation-delay: 2.6s; }
+.path-9 { animation-delay: 10.3s; }
+.path-10 { animation-delay: 12.5s; }
+.path-11 { animation-delay: 11.5s; }
+.path-12 { animation-delay: 10.1s; }
 
 /* Regular trace animation */
 @keyframes trace {
@@ -60,6 +79,6 @@ path {
     stroke-dashoffset: 3000; /* Fully hidden */
   }
   100% {
-    stroke-dashoffset: 0; /* Move the visible segment across the path */
+    stroke-dashoffset: 150; /* Move the visible segment across the path */
   }
 }

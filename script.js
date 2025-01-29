@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     paths.forEach((path, index) => {
         const length = path.getTotalLength(); // Get path length dynamically
-        const segmentSize = 50; // Fixed visible portion
+        const segmentSize = 30; // Fixed visible portion
         const hiddenSize = length - segmentSize; // Rest of the path remains hidden
 
         // Apply stroke properties
